@@ -74,6 +74,7 @@ app.post('/login', (req, res, next) => {
     console.log(`req.session.passport: ${JSON.stringify(req.session.passport)}`)
     console.log(`req.user: ${JSON.stringify(req.user)}`)
     req.login(user, (err) => {
+      console.log('Request User: ' + req.user);
       console.log('Inside req.login() callback')
       console.log(`req.session.passport: ${JSON.stringify(req.session.passport)}`)
       console.log(`req.user: ${JSON.stringify(req.user)}`)
